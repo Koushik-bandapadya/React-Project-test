@@ -1,0 +1,28 @@
+
+.styleh1{
+
+    background-color:purple;
+    color :white;
+    font-size: 3rem;
+    text-align: center;
+    padding: 15px;
+    margin: 0px;
+}
+.card{
+    background-color:rgb(117, 116, 172);
+    padding: 10px;
+    margin-top: 5px;
+
+}
+
+.STATE{
+
+    background-color:rgb(77, 76, 161);
+    padding: 10px;
+    margin-top: 5px;
+    
+}
+
+.btn:hover{
+    background-color: rgb(129, 48, 196);
+}
