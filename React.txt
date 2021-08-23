@@ -1,0 +1,302 @@
+
+
+************React.Fragment***********
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+// reportWebVitals();
+
+ReactDOM.render(
+  <React.Fragment>
+    <h1>Koushik Banerjee</h1>
+    <p>1812171642</p>
+    <h2>NSU</h2>
+  </React.Fragment>,
+document.getElementById("root")
+);
+***********Exprestion***************
+import React from "react";
+import ReactDOM from "react-dom";
+
+const fname = "Koushik";
+
+ReactDOM.render(
+  <React.Fragment>
+    <h1> My name is {fname}</h1>
+    <p>My lucky number is {Math.random()}</p>
+  </React.Fragment>,
+
+  document.getElementById("root")
+);
+
+
+************Template Literals***********
+
+import React from "react";
+import ReactDOM from "react-dom";
+
+const fname = "Koushik";
+const lname = "Banerjee";
+
+ReactDOM.render(
+  <React.Fragment>
+    <h1> 
+
+    My name is {fname+' '+lname}
+
+    </h1>
+
+    <p>My lucky number is {Math.random()}</p>
+
+  </React.Fragment>,
+
+  document.getElementById("root")
+);
+
+************Template Literals*************
+<React.Fragment>
+    <h1> 
+
+    My name is {fname+' '+lname}
+    <p></p>
+    {`My name is ${fname}`} 
+
+    </h1>
+
+    <p>My lucky number is {Math.random()}</p>
+
+  </React.Fragment>,
+
+  document.getElementById("root")
+
+
+************Mini Project*************
+let curDate = new Date();
+curDate = curDate.getHours();
+let greeting = "";
+let cssStyle = {};
+
+if (curDate >= 1 && curDate <= 11) {
+  greeting = " Good Morning";
+  cssStyle.color = "green";
+} else if (curDate >= 12 && curDate <= 19) {
+  greeting = " Good Afternoon";
+  cssStyle.color = "Orange";
+} else {
+  greeting = " Good Night";
+  cssStyle.color = "black";
+}
+
+ReactDOM.render(
+  <>
+    <div>
+      <h1>
+        Hello Sir,<span style={cssStyle}>{greeting} </span>
+      </h1>
+    </div>
+  </>,
+  document.getElementById("root")
+);
+
+
+*********************************************
+import React from "react";
+import {add,sub,vag,mul} from "./Cal";
+
+function App(){
+  return(
+<>
+    <ul>
+      <li>Sum of two number is : {add(40,50)}</li>
+      <li>Sub of two number is : {sub(100,10)}</li>
+      <li>Div of two number is : {vag(100,10)} </li>
+      <li>Mult of two number is : {mul(40,50)}</li>
+    </ul> 
+  </>
+);
+}
+export default App;
+
+*****************************************
+********************************************
+*****************************************
+********************************************
+*****************************************
+********************************************
+injex.js=>
+
+
+import React from "react";
+import ReactDOM from "react-dom";
+import Card from "./Cards";
+import Sdata from "./Sdata";
+
+function ncarad(value) {
+  console.log(value);
+  return (
+    <Card
+      imgsrc={value.imgsrc}
+      title={value.title}
+      sname={value.sname}
+      link={value.link}
+    />
+  )
+}
+
+ReactDOM.render(
+  <>
+    <h1>List of Movies:</h1>
+    {Sdata.map(ncarad)};
+  </>,
+  document.getElementById("root")
+);
+
+
+
+Cards.jsx =>
+
+import React from 'react'
+
+function Card(props) {
+  
+  return (
+    <>
+      <div className="cards">
+        <div className="card">
+          <img src={props.imgsrc} alt="myPic" className="card_img" />
+          <div className="card_info">
+            <span className="card_category">{props.title}  </span>
+            <h3 className="card_title">{props.sname} </h3>
+            <a href={props.link} target="_blank">
+              <button>Watch Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+export default Card;
+
+
+Sdata=>
+
+const Sdata = [
+  {
+    imgsrc: "https://wallpapercave.com/wp/wp4056410.jpg",
+    title: "A Netflix Original Series",
+    sname: "Dark",
+    link: "https://www.netflix.com/bd/title/80100172",
+  },
+  {
+    imgsrc: "https://www.linkpicture.com/q/grammar.png",
+    title: "A Netflix Original Series",
+    sname: "Koushik",
+    link: "https://www.netflix.com/bd/title/80100172",
+  },
+  {
+    imgsrc: "https://wallpapercave.com/wp/wp4056410.jpg",
+    title: "A Netflix Original Series",
+    sname: "Banerjee",
+    link: "https://www.netflix.com/bd/title/80100172",
+  },
+];
+
+export default Sdata;
+
+
+
+<div className="container-fluid nav_bg">
+        <div className="row">
+          <div className="col-10 max-auto">
+              
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+****************************************
+
+
+
+
+
+import React from "react";
+import ReactDOM from "react-dom";
+// import "./index.css";
+import "./CSS/bootstrap.min.css";
+import "./CSS/animate.min.css";
+// import "./CSS/fontawesome.css";
+import "./CSS/modal-video.min.css";
+// import "./CSS/owl-carusel.css";
+import "./CSS/slick.css";
+import "./CSS/stellarnav.css";
+import "./img/icon/fabicon.png";
+
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+
+ReactDOM.render(
+  <>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </>,
+  document.getElementById("root")
+);
+
+
+
+
+
+************App*****************
+
+
+import React from "react";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
+import Home from "./Component/Home";
+import About from "./Component/About";
+import Service from "./Component/Service";
+import Contact from "./Component/Contact";
+import Navbar from "./Component/Navbar";
+import { Switch, Route, Redirect } from "react-router-dom";
+
+const App = () => {
+  return (
+    <>
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/service" component={Service} />
+        <Route exact path="/contact" component={Contact} />
+        <Redirect to="/" />
+      </Switch>
+    </>
+  );
+};
+
+export default App;
+
+
+
+****************************************
+
+
+
+
+
+
